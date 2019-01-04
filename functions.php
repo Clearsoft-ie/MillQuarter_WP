@@ -67,8 +67,7 @@ if ( ! function_exists( 'MilQuarter_setup' ) ) {
 
 		// Make the theme translation ready
 		load_theme_textdomain( 'MilQuarter', get_template_directory() . '/languages' );
-		
-		
+
 		wp_enqueue_style( 'MilQuarter-style', get_template_directory_uri() . '/style.css', $dependencies );
 
 	}

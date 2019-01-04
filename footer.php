@@ -50,6 +50,42 @@
     </div>
 </div><!-- /PRELOADER -->
 
+<!-- Google Map -->
+<script>
+    function initMap() {
+        var centreMap = { lat: 53.014469, lng: -6.399321 };
+        var uluru = { lat: 52.667195, lng: -6.287813 };
+        var map = new google.maps.Map(document.getElementById('mapTag'), {
+            zoom: 9,
+            center: uluru,
+            scrollwheel: false
+        });
+
+        var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<img src="<?php echo get_template_directory_uri() ;?>/assets/images/logo-dark.png" width="145" height="80"/>' +
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            title: 'MilQuarter'
+        });
+
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+        infowindow.open(map, marker);
+    }
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArD9J6nci2T70ycnSgL2BklRFB6kNHpNM&callback=initMap">
+</script>
 
 <!-- JAVASCRIPT FILES -->
 <script>var plugin_path = '<?php echo get_template_directory_uri() ;?>/assets/plugins/';</script>

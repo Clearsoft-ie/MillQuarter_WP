@@ -9731,3 +9731,9 @@ section.dark-2 div.category-grid .card {
 	color:#999 !important; 
 	z-index:100;
 }
+
+span.wpcf7-list-item {
+	display: inline-block;
+	padding-bottom: 10px;
+	margin-left: 0px!important;
+}
