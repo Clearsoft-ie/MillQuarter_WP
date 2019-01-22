@@ -56,8 +56,8 @@
         var centreMap = { lat: 53.014469, lng: -6.399321 };
         var uluru = { lat: 52.667195, lng: -6.287813 };
         var map = new google.maps.Map(document.getElementById('mapTag'), {
-            zoom: 9,
-            center: uluru,
+            zoom: 8,
+            center: centreMap,
             scrollwheel: false
         });
 
